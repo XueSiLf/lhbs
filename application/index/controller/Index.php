@@ -1,11 +1,14 @@
 <?php
 namespace app\index\controller;
-use think\Controller;
-class Index extends Controller
+use app\index\controller\Common;
+
+class Index extends Common
 {
+    /* 1 后台首页渲染 */
     public function index()
     {
-//        return '欢迎来到景德镇陶瓷大学科研管理系统';
+        /* 判断用户是否登录 */
+        // $this->isLogin();
         return $this->view->fetch('index');
     }
 }
